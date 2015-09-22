@@ -1,0 +1,44 @@
+// Colors
+
+$color-green: #23D373;
+$color-blue: #257ED4;
+$color-red: #C0392B;
+$color-orange: #FF971C;
+$color-beige: wheat;
+$color-pink: #ED1A72;
+
+
+$color-white: #FFF;
+$color-grey: #3D3D3D;
+$color-light-grey: lighten($color-grey, 10);
+$color-black: #1E1E1E;
+
+
+
+$background-color: $color-black;
+
+$text-color: $color-grey;
+$text-color-on-dark: #1E1E1E;
+$link-color: $color-pink;
+
+// Typography
+
+$base-size: 17;
+$leading: 27;
+
+$lineheight: ($leading / $base-size) * 1rem;
+
+$serif:     'Playfair Display', Georgia, serif;
+$sans:      'Roboto', Helvetica, sans-serif;
+$mono:      Menlo, monospace;
+$headings:  $serif, serif;
+
+// Measures
+
+$page-width:        90%;
+$max-width:         40rem;
+
+$desktop:           1700px;
+$laptop:            1280px;
+$tablet:            768px;
+$handheld:          481px;

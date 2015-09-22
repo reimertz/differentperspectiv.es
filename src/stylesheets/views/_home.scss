@@ -1,0 +1,282 @@
+/* =HOME VIEW
+--------------------------------------------- */
+
+.home {
+
+text-align: center;
+
+[role="banner"] {
+  background: url('/images/splash-2.jpg') no-repeat center -100px;
+  background-size: cover;
+  min-height: 49rem;
+  padding: $lineheight 2%;
+  text-align: left;
+
+
+  h1, h2 {
+    max-width:35rem;
+    color: $color-white;
+  }
+
+  h1 {
+    color: $color-white;
+    line-height: 1.1;
+    font-size: 5rem;
+    margin: 13rem 0 $lineheight / 2;
+  }
+  h2 {
+    font-family: Courier;
+  }
+
+  @include tablet {
+    padding: $lineheight 5%;
+    text-align: center;
+    h1 {
+      margin: 20rem 0 $lineheight / 2;
+      font-size: 3em;
+      line-height: 1.2;
+    }
+
+    h2 {
+     font-size: 1rem;
+    }
+  }
+}
+
+[role="main"] {
+  font-size: to_rem(19);
+  background-color: white;
+
+}
+
+.pitch {
+
+  section {
+    padding: $lineheight 2%;
+    //box-shadow: inset 0px 5px 2px rgba(0,0,0,0.3);
+
+  }
+
+  &__reason {
+    color: $color-red;
+    h1 {
+      color: $color-red;
+    }
+
+  }
+
+  &__solution {
+    position: relative;
+    text-align: center;
+
+    figure.demo {
+      display: inline-block;
+      width: 731px;
+      height: 543px;
+      position: relative;
+      background: url('/images/cardboard.png') transparent center no-repeat;
+      background-size: contain;
+      z-index: 1;
+      margin-bottom: -455px;
+    }
+
+    video {
+      display: inline-block;
+      z-index: 0;
+    }
+
+    @include tablet {
+      figure.demo {
+        width: 365px;
+        height: 271px;
+        margin-bottom: -270px;
+      }
+      video {
+        width: 340px;
+        height: 250px;
+      }
+    }
+
+  }
+
+  &__demo {
+
+
+
+  }
+}
+
+.get-perspectives {
+
+    &__download {
+
+    }
+
+    &__source {
+
+    }
+
+}
+
+
+.story {
+
+  .logo {
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  section {
+    padding: $lineheight*3 5%;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & &__lookback {
+    background-color: $color-red;
+    color: #fff;
+    padding-top: $lineheight*5;
+    padding-bottom: $lineheight*5;
+
+    h1 {
+      margin: $lineheight 0 $lineheight*2;
+    }
+  }
+
+  &__spotify {
+
+    .spotify-logo {
+      width: 410px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
+
+    .spotify-projects {
+      @include list-reset;
+      display: flex;
+      flex-wrap: wrap;
+      font: normal #{to_rem(12)}/1.4 $mono;
+      max-width: 45rem;
+      margin: $lineheight*3 auto;
+
+      li {
+        flex-basis: 50%;
+        margin-bottom: $lineheight*3;
+      }
+
+      p {
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+
+      figure {
+        margin: 0 auto $lineheight*2;
+        height: $lineheight*4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      @include handheld {
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+          flex-basis: auto;
+          margin-bottom: $lineheight*2;
+        }
+
+        figure {
+          margin-bottom: $lineheight;
+        }
+      }
+
+      &__diversify {
+        figure {
+          max-width: 241px;
+        }
+      }
+
+      &__gbgsh {
+        color: #000;
+      }
+
+      &__wowhack {
+        color: #E01270;
+      }
+
+      &__diversify {
+        color: #9B4E7E;
+      }
+
+      &__mmc {
+        color: #3F7812;
+      }
+    }
+  }
+
+  &__chalmers {
+    $color: darken(desaturate($color-blue, 20%), 30%);
+
+    background-color: $color-blue;
+    color: #fff;
+
+    .muted {
+      color: $color;
+    }
+
+    h1 {
+      font-size: to_rem(50);
+      color: #fff;
+      margin: $lineheight*2 0;
+    }
+  }
+
+  & &__misc {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: to_rem(18);
+
+    p {
+      max-width: 30rem;
+    }
+  }
+
+  .story__misc__background {
+    background: #fff url('/assets/images/road-improved.jpg') no-repeat center;
+    background-size: cover;
+    color: #19394B;
+    height: 700px;
+    font-family: 'Nevis', $sans;
+    position: relative;
+
+    p {
+      margin: 0;
+      position: absolute;
+      left: 35vw;
+      top: 23%;
+      font-size: to_rem(80);
+    }
+
+    @include handheld {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+
+      p {
+        position: static;
+        font-size: 16vw;
+      }
+    }
+  }
+}
+
+
+}

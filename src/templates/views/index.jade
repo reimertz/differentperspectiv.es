@@ -1,0 +1,46 @@
+extends ../layouts/default
+block vars
+  - var title = "home";
+
+block content
+  header(role='banner')
+    h1 Different Perspectives
+    h2 interactive demo using google cardboard to experience how bullying look, feel and sound.
+    span
+      a.btn(href='/#reason') learn more
+      a.btn(href='/#download') download prototype
+
+
+  main(role="main")
+    section.pitch
+      section.pitch__reason.spacing--top
+        figure.bubble
+          span.bubble--text reason
+        p.
+          interactive demo using google cardboard to experience how bullying look, feel and sound.
+
+      section.pitch__solution
+        figure.bubble.bubble--inverted-animation
+          span.bubble--text solution
+        div
+          figure.demo
+          video(autoplay muted loop)
+            source(src="/images/vr_demo.mp4" type="video/mp4")
+
+
+      section.pitch__demo
+
+
+
+    section.get-perspectives
+      section.get-perspectives__download
+
+    section#solution.home-resion
+      h1="solution"
+    section.home-teaser
+      span.teaser__text="Immersive experiences for everyone"
+    section#download.home-download
+      h1="download prototype"
+
+
+    section
