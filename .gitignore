@@ -1,7 +1,0 @@
-.dist
-.tmp
-.publish
-backup
-node_modules/
-bower_components/
-dist/
