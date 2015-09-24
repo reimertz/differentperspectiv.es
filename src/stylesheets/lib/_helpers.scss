@@ -1,33 +1,50 @@
 /* =HELPERS
 --------------------------------------------- */
+
+.color-green {
+  color: $color-green;
+}
+.color-blue {
+  color: $color-blue;
+}
+.color-red {
+  color: $color-red;
+}
+.color-orange {
+  color: $color-orange;
+}
+.color-beige {
+  color: $color-beige;
+}
+.color-pink {
+  color: $color-pink;
+}
+
+.bg-color-green {
+  background-color: $color-green;
+}
+.bg-color-blue {
+  background-color: $color-blue;
+}
+.bg-color-red {
+  background-color: $color-red;
+}
+.bg-color-orange {
+  background-color: $color-orange;
+}
+.bg-color-beige {
+  background-color: $color-beige;
+}
+.bg-color-pink {
+  background-color: $color-pink;
+}
+
 .icon {
   width: 1em;
   height: 1em;
   fill: currentColor;
   vertical-align: middle;
 }
-
-.teaser {
-  background-color: $color-pink;
-  text-align: center;
-  padding: 1rem;
-
-  .teaser__text {
-    color: $color-white;
-    font-family: $serif;
-    font-size: to_rem(30);
-  }
-
-  @include handheld {
-    padding: 3rem 0;
-
-    .teaser__text {
-      font-size: to_rem(20);
-
-    }
-  }
-}
-
 
 .page-title {
   text-align: center;
@@ -113,32 +130,6 @@
   text-align: center;
 }
 
-figure.bubble {
-  background-color: $color-pink;
-  border-radius: 5rem;
-  display: inline-block;
-  height: 10rem;
-  width: 10rem;
-  transition: 200ms;
-
-  .bubble--text {
-    color: white;
-    font-size: 2rem;
-    line-height: 10rem;
-  }
-
-  &:hover {
-    border-radius: 0;
-  }
-
-  &--inverted-animation {
-    border-radius: 0;
-
-    &:hover {
-      border-radius: 5rem;
-    }
-  }
-}
 
 figure.image--full {
   margin-left: -14vw;

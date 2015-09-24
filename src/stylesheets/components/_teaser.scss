@@ -1,0 +1,20 @@
+.teaser {
+  background-color: $color-black;
+  text-align: center;
+  padding: 1rem;
+
+  .teaser__text {
+    color: $color-white;
+    font-family: $serif;
+    font-size: to_rem(30);
+  }
+
+  @include handheld {
+    padding: 3rem 0;
+
+    .teaser__text {
+      font-size: to_rem(20);
+
+    }
+  }
+}

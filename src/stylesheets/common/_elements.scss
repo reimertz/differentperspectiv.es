@@ -6,7 +6,7 @@
 
 html {
   background-color: $background-color;
-  font: normal #{$base-size}px/#{$leading / $base-size} $serif;
+  font: normal #{$base-size}px/#{$leading / $base-size} $base-font;
   color: $text-color;
   padding-bottom: $lineheight*2;
 

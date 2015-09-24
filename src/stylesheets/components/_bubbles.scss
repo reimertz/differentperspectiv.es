@@ -1,0 +1,46 @@
+figure.bubble {
+  font-family: $serif;
+  background-color: $color-pink;
+  border-radius: 5rem;
+  display: inline-block;
+  height: 10rem;
+  width: 10rem;
+  transition: 200ms;
+
+  .bubble--text {
+    color: white;
+    font-size: 2rem;
+    line-height: 10rem;
+  }
+
+  &:hover {
+    border-radius: 0;
+  }
+
+  &--inverted-animation {
+    border-radius: 0;
+
+    &:hover {
+      border-radius: 5rem;
+    }
+  }
+
+  @include handheld {
+    border-radius: 4rem;
+    height: 8rem;
+    width: 8rem;
+
+    .bubble--text {
+      color: white;
+      font-size: 1.2em;
+      line-height: 8rem;
+    }
+
+    &--inverted-animation {
+      border-radius: 0;
+      &:hover {
+        border-radius: 4rem;
+      }
+    }
+  }
+}

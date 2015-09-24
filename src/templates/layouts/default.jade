@@ -4,7 +4,7 @@ doctype html
 html.no-js
   head
     meta(charset='utf-8')
-    title A Different Perspective
+    title Different Perspectives
     meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     script(type='text/javascript').
@@ -18,13 +18,11 @@ html.no-js
 
     // build:css /styles/vendor.css
     // bower:css
-    link(rel='stylesheet', href='/bower_components/normalize.css/normalize.css')
     // endbower
     // endbuild
 
-    // build:css /styles/main.css
+    link(rel='stylesheet' href='/styles/above-the-fold.css')
     link(rel='stylesheet' href='/styles/main.css')
-    // endbuild
   body(class="#{title}")
     nav(role="navigation")
       //span differentperspectiv.es
@@ -32,7 +30,7 @@ html.no-js
       ul.navigation__left
         li differentperspectiv.es
         li
-          a(href="/#reason") reason
+          a(href="/#reasons") reason
         li |
         li
           a(href="/#solution") solution
@@ -51,10 +49,11 @@ html.no-js
           a(href="/sv")="sv"
     block content
 
-
     // build:js /scripts/vendor.js
     // bower:js
 
+    script(src='/bower_components/waypoints/lib/noframework.waypoints.min.js')
+    script(src='/bower_components/Chart.js/Chart.js')
     // endbower
     // endbuild
 
@@ -64,3 +63,5 @@ html.no-js
     // build:js /scripts/main.js
     script(src='/scripts/main.js')
     // endbuild
+
+

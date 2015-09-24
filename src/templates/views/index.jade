@@ -5,42 +5,65 @@ block vars
 block content
   header(role='banner')
     h1 Different Perspectives
+
     h2 interactive demo using google cardboard to experience how bullying look, feel and sound.
-    span
-      a.btn(href='/#reason') learn more
+    span.buttons
+      a.btn(href='/#reasons') learn more
       a.btn(href='/#download') download prototype
 
 
   main(role="main")
-    section.pitch
-      section.pitch__reason.spacing--top
+    section#reasons.reasons
+
+      aside.reasons__story
         figure.bubble
-          span.bubble--text reason
+          span.bubble--text reasons
         p.
-          interactive demo using google cardboard to experience how bullying look, feel and sound.
+          School start. I remember the anxiety of standing there in the morning, looking out over the school yard.
+          Now it begins. The glances. The harrasment and intimidations. The exclusion.
 
-      section.pitch__solution
-        figure.bubble.bubble--inverted-animation
-          span.bubble--text solution
-        div
-          figure.demo
-          video(autoplay muted loop)
-            source(src="/images/vr_demo.mp4" type="video/mp4")
+        p This is a normal day for 60 000 children in Sweden. This needs to #[b stop].
+        p If children understood how much it hurts, they would probably stop. If children knew how to intervene, they probably would.
+        p #[b This is why we created Different Perspectives.]
 
-
-      section.pitch__demo
-
-
-
-    section.get-perspectives
-      section.get-perspectives__download
-
-    section#solution.home-resion
-      h1="solution"
-    section.home-teaser
-      span.teaser__text="Immersive experiences for everyone"
-    section#download.home-download
-      h1="download prototype"
+      section.reasons__infographics
+        ul.reasons__infographics__statistics
+          li
+            h1 60 000
+            p this is the number of #[b kids] who gets bullied each year in Sweden.
+          li
+            canvas#1-out-of-10
+            p #[b 1 out of 10] said that a #[b teacher] has insulted them at school.
 
 
-    section
+        ul.reasons__infographics__most-common-insults
+          li
+            h2 most common insults
+          li
+            figure.icon-chat-3
+            figcaption verbal
+          li
+            figure.icon-eye
+            figcaption glances
+          li
+            figure.icon-hand-grab-o
+            figcaption physical
+
+        ul.reasons__infographics__most-common-subjects
+          li
+            h2 most common subjects
+          li
+            figure.icon-globe
+            figcaption etnicity
+          li
+            figure.icon-female
+            figcaption gender
+          li
+            figure.icon-heart-broken
+            figcaption sexual
+
+    section.solution
+      section.solution__cardboard
+        figure.demo
+        video(autoplay muted loop)
+          source(src="/images/vr_demo.mp4" type="video/mp4")

@@ -1,25 +1,13 @@
-// Bower
-@import "animate";
-
 // Tools
 @import 'variables';
 @import 'tools/functions';
 @import 'tools/mixins';
 
-// Lib
-@import 'lib/normalize';
-@import 'lib/fonts';
-
-// Common
-@import 'common/animations';
-@import 'common/elements';
-@import 'common/headings';
-@import 'common/navigation';
-@import 'common/buttons';
-
-// Helpers
-
 @import 'lib/helpers';
+
+// Components
+@import 'components/bubbles';
+@import 'components/teaser';
 
 // Views
 @import 'views/home';

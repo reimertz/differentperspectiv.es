@@ -7,12 +7,12 @@ var reload = browserSync.reload;
 
 
 gulp.task('stylesheets', function () {
-  return gulp.src('src/stylesheets/main.scss')
+  return gulp.src('src/stylesheets/*.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       outputStyle: 'nested', // libsass doesn't support expanded yet
       precision: 10,
-      includePaths: ['.', 'bower_components/animate.css-scss/'],
+      includePaths: ['.', 'bower_components/animate.css-scss/', 'bower_components/font-awesome/scss/'],
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([
