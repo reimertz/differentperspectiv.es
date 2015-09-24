@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>A Different Perspective</title>
+    <title>Different Perspectives</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
@@ -16,6 +16,7 @@
       
     </script>
     <link rel="stylesheet" href="/styles/vendor.css">
+    <link rel="stylesheet" href="/styles/above-the-fold.css">
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body class="home">
@@ -23,7 +24,7 @@
       <!--span differentperspectiv.es-->
       <ul class="navigation__left">
         <li>differentperspectiv.es</li>
-        <li><a href="/#reason">reason</a></li>
+        <li><a href="/#reasons">reason</a></li>
         <li>|</li>
         <li><a href="/#solution">solution</a></li>
         <li>|</li>
@@ -38,42 +39,80 @@
     </nav>
     <header role="banner">
       <h1>Different Perspectives</h1>
-      <h2>interactive demo using google cardboard to experience how bullying look, feel and sound.</h2><span><a href="/#reason" class="btn">learn more</a><a href="/#download" class="btn">download prototype</a></span>
+      <h2>interactive demo using google cardboard to experience how bullying look, feel and sound.</h2><span class="buttons"><a href="/#reasons" class="btn">learn more</a><a href="/#download" class="btn">download prototype</a></span>
     </header>
     <main role="main">
-      <section class="pitch">
-        <section class="pitch__reason spacing--top">
-          <figure class="bubble"><span class="bubble--text">reason</span></figure>
+      <section id="reasons" class="reasons">
+        <aside class="reasons__story">
+          <figure class="bubble"><span class="bubble--text">reasons</span></figure>
           <p>
-            interactive demo using google cardboard to experience how bullying look, feel and sound.
+            School start. I remember the anxiety of standing there in the morning, looking out over the school yard.
+            Now it begins. The glances. The harrasment and intimidations. The exclusion.
             
           </p>
+          <p>This is a normal day for 60 000 children in Sweden. This needs to <b>stop</b>.</p>
+          <p>If children understood how much it hurts, they would probably stop. If children knew how to intervene, they probably would.</p>
+          <p><b>This is why we created Different Perspectives.</b></p>
+        </aside>
+        <section class="reasons__infographics">
+          <ul class="reasons__infographics__statistics">
+            <li>
+              <h1>60 000</h1>
+              <p>this is the number of <b>kids</b> who gets bullied each year in Sweden.</p>
+            </li>
+            <li>
+              <canvas id="1-out-of-10"></canvas>
+              <p><b>1 out of 10</b> said that a <b>teacher</b> has insulted them at school.</p>
+            </li>
+          </ul>
+          <ul class="reasons__infographics__most-common-insults">
+            <li>
+              <h2>most common insults</h2>
+            </li>
+            <li>
+              <figure class="icon-chat-3"></figure>
+              <figcaption>verbal</figcaption>
+            </li>
+            <li>
+              <figure class="icon-eye"></figure>
+              <figcaption>glances</figcaption>
+            </li>
+            <li>
+              <figure class="icon-hand-grab-o"></figure>
+              <figcaption>physical</figcaption>
+            </li>
+          </ul>
+          <ul class="reasons__infographics__most-common-subjects">
+            <li>
+              <h2>most common subjects</h2>
+            </li>
+            <li>
+              <figure class="icon-globe"></figure>
+              <figcaption>etnicity</figcaption>
+            </li>
+            <li>
+              <figure class="icon-female"></figure>
+              <figcaption>gender</figcaption>
+            </li>
+            <li>
+              <figure class="icon-heart-broken"></figure>
+              <figcaption>sexual</figcaption>
+            </li>
+          </ul>
         </section>
-        <section class="pitch__solution">
-          <figure class="bubble bubble--inverted-animation"><span class="bubble--text">solution</span></figure>
-          <div>
-            <figure class="demo"></figure>
-            <video autoplay muted loop>
-              <source src="/images/vr_demo.mp4" type="video/mp4">
-            </video>
-          </div>
+      </section>
+      <section class="solution">
+        <section class="solution__cardboard">
+          <figure class="demo"></figure>
+          <video autoplay muted loop>
+            <source src="/images/vr_demo.mp4" type="video/mp4">
+          </video>
         </section>
-        <section class="pitch__demo"></section>
       </section>
-      <section class="get-perspectives">
-        <section class="get-perspectives__download"></section>
-      </section>
-      <section id="solution" class="home-resion">
-        <h1>solution</h1>
-      </section>
-      <section class="home-teaser"><span class="teaser__text">Immersive experiences for everyone</span></section>
-      <section id="download" class="home-download">
-        <h1>download prototype</h1>
-      </section>
-      <section></section>
     </main>
-    
+    <script src="/scripts/vendor.js"></script>
     
     <script src="/scripts/main.js"></script>
+    
   </body>
 </html>
