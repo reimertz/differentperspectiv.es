@@ -57,7 +57,7 @@
         <section class="reasons__infographics">
           <ul class="reasons__infographics__statistics">
             <li>
-              <h1>60 000</h1>
+              <h1 class="color-orange">60 000</h1>
               <p>this is the number of <b>kids</b> who gets bullied each year in Sweden.</p>
             </li>
             <li>
@@ -101,13 +101,50 @@
           </ul>
         </section>
       </section>
-      <section class="solution">
+      <section class="solution-fixed">
+        <figure class="solution-fixed__camera"></figure>
+        <figure class="solution-fixed__iphone__background"></figure>
+        <figure class="solution-fixed__iphone__overlay"></figure>
+      </section>
+      <section id="solution" class="solution">
+        <aside class="solution__explaination">
+          <figure class="bubble bubble--inverted-animation"><span class="bubble--text bubble">solution</span></figure>
+          <section></section>
+          <p class="spacing--top spacing--double">
+            <h1>create a discussion</h1>In cooperation with theachers and psychologists, we want to design & write guidelines for a workshop that will be fully interactive using vr-googles.
+          </p>
+          <p data-iphone-step="show-camera" class="spacing--bottom spacing--double">
+            <h1>360 degree videos</h1>The majority of kids today have smartphones. They use them to play games and educate themselfs.
+          </p>
+          <p>but they could be used for so much more</p>
+          <p data-iphone-step="show-iphone" class="spacing--bottom spacing--double spacing--bottom spacing--double">
+            <h1>use tools already available</h1>The majority of kids today have smartphones. They use them to play games and educate themselfs.
+          </p>
+          <p>but they could be used for so much more</p>
+          <p data-iphone-step="unity" class="spacing--bottom spacing--double">
+            <h1>built for maintainability</h1>we have build the entire app using Unity and all the code and workshops will be available open-sourced projects on Github.
+            This means that anyone can contribute and help us improve this project.
+          </p>
+          <p data-iphone-step="app" class="spacing--bottom spacing--double">
+            <h1>multi-platform</h1>Since Unity support both iOS and Android devices, we decided to support both of them to make sure that as many kids as possible could download and intertact with our app.
+          </p>
+          <p data-iphone-step="vr" class="spacing--bottom spacing--double">
+            <h1>Virtual Reality in 360 degrees</h1>We designed our app to be compatible with Google Cardboard since this is the cheapest alternative to turn a smartphone into a virtual reality gadget.
+          </p>
+        </aside>
         <section class="solution__cardboard">
-          <figure class="demo"></figure>
-          <video autoplay muted loop>
-            <source src="/images/vr_demo.mp4" type="video/mp4">
-          </video>
+          <section class="solution__cardboard__container">
+            <figure class="solution__cardboard__overlay"></figure>
+            <video muted loop data-vr-video class="solution__cardboard__video">
+              <source src="/images/vr_demo.mp4" type="video/mp4">
+            </video>
+          </section>
         </section>
+      </section>
+      <section id="download" class="download">
+        <h1>Download prototype</h1>
+        <h2>still in progress, will be available soon</h2>
+        <section class="buttons"><a href="/#download" disabled class="btn">iOS</a><a href="/#download" disabled class="btn">Android</a></section>
       </section>
     </main>
     <script src="/scripts/vendor.js"></script>
