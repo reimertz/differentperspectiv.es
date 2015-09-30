@@ -15,6 +15,12 @@
 
   transition: 200ms;
 
+  &[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+    cursor: cross;
+  }
+
   &:hover {
     margin-top: 2px;
     border-bottom: 3px solid darken($color-pink, 20);

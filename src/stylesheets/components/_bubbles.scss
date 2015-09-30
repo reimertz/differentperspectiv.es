@@ -2,7 +2,8 @@ figure.bubble {
   font-family: $serif;
   background-color: $color-pink;
   border-radius: 5rem;
-  display: inline-block;
+  display: block;
+  margin: 0 5rem;
   height: 10rem;
   width: 10rem;
   transition: 200ms;

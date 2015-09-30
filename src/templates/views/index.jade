@@ -13,6 +13,7 @@ block content
 
 
   main(role="main")
+
     section#reasons.reasons
 
       aside.reasons__story
@@ -29,7 +30,7 @@ block content
       section.reasons__infographics
         ul.reasons__infographics__statistics
           li
-            h1 60 000
+            h1.color-orange 60 000
             p this is the number of #[b kids] who gets bullied each year in Sweden.
           li
             canvas#1-out-of-10
@@ -62,8 +63,66 @@ block content
             figure.icon-heart-broken
             figcaption sexual
 
-    section.solution
+
+    section.solution-fixed
+      figure.solution-fixed__camera
+
+      figure.solution-fixed__iphone__background
+      figure.solution-fixed__iphone__overlay
+
+    section#solution.solution
+      aside.solution__explaination
+        figure.bubble.bubble--inverted-animation
+          span.bubble--text.bubble solution
+        section
+        p.spacing--top.spacing--double
+          h1 create a discussion
+          | In cooperation with theachers and psychologists, we want to design & write guidelines for a workshop that will be fully interactive using vr-googles.
+
+        p(data-iphone-step="show-camera").spacing--bottom.spacing--double
+          h1 360 degree videos
+          | The majority of kids today have smartphones. They use them to play games and educate themselfs.
+
+        p
+          | but they could be used for so much more
+
+
+        p(data-iphone-step="show-iphone").spacing--bottom.spacing--double.spacing--bottom.spacing--double
+          h1 use tools already available
+          | The majority of kids today have smartphones. They use them to play games and educate themselfs.
+
+        p
+          | but they could be used for so much more
+
+
+        p(data-iphone-step="unity").spacing--bottom.spacing--double
+          h1 built for maintainability
+          | we have build the entire app using Unity and all the code and workshops will be available open-sourced projects on Github.
+          | This means that anyone can contribute and help us improve this project.
+
+
+
+
+        p(data-iphone-step="app").spacing--bottom.spacing--double
+          h1 multi-platform
+          | Since Unity support both iOS and Android devices, we decided to support both of them to make sure that as many kids as possible could download and intertact with our app.
+
+
+
+        p(data-iphone-step="vr").spacing--bottom.spacing--double
+          h1 Virtual Reality in 360 degrees
+          | We designed our app to be compatible with Google Cardboard since this is the cheapest alternative to turn a smartphone into a virtual reality gadget.
+
       section.solution__cardboard
-        figure.demo
-        video(autoplay muted loop)
-          source(src="/images/vr_demo.mp4" type="video/mp4")
+        section.solution__cardboard__container
+          figure.solution__cardboard__overlay
+          video(muted loop data-vr-video).solution__cardboard__video
+            source(src="/images/vr_demo.mp4" type="video/mp4")
+
+    section#download.download
+      h1 Download prototype
+      h2 still in progress, will be available soon
+      section.buttons
+        a.btn(href='/#download' disabled) iOS
+        a.btn(href='/#download' disabled) Android
+

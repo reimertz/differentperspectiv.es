@@ -82,6 +82,7 @@
     align-items: stretch;
     background-color: $color-black;
     box-shadow: 0px 0px 10px $color-black;
+    z-index: 3;
 
     &__story,
     &__infographics {
@@ -91,12 +92,11 @@
     }
 
     &__story {
-      opacity: 0;
       flex: 2;
       align-items: stretch;
       justify-content: center;
       padding: $lineheight*2 2%;
-
+      opacity: 0;
       @include tablet {
         flex: 100%;
       }
@@ -107,14 +107,13 @@
       flex: 3;
 
       @include tablet {
-        flex: 100%;
+        display: none;
       }
 
       &__statistics,
       &__most-common-insults,
       &__most-common-subjects {
         @include list-reset;
-
         display: flex;
         flex: 100%;
         flex-flow: row wrap;
@@ -183,8 +182,8 @@
       }
       &__most-common-insults {
         li {
-          color: $color-white;
-          background-color: $color-black;
+          //color: $color-white;
+          //background-color: $color-black;
         }
 
       }
@@ -228,22 +227,160 @@
     }
   }
 
-  .solution {
-    &__cardboard {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .solution-fixed {
+    position: fixed !important;
+    width: 60%;
+    margin-left: 40%;
+    text-align: center;
+    top: 150px;
+    z-index: 1;
 
-      figure {
+
+    &__iphone__background,
+    &__iphone__overlay,
+    &__camera {
+      margin-left: 15px;
+      height: 450px;
+      left:0;
+      position: absolute;
+      top:0;
+      width: 100%;
+      background-size: auto 450px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition-duration: 500ms;
+      opacity: 0;
+    }
+
+    &__iphone__background {
+      background-image: url('/images/iphone_black.png');
+    }
+
+    &__camera {
+        background-image: url('/images/camera.png');
+    }
+
+    &.show-camera {
+      .solution-fixed__camera {
+        opacity: 1;
+      }
+    }
+
+    &.show-iphone {
+      .solution-fixed__iphone__overlay,
+      .solution-fixed__iphone__background {
+        opacity: 1;
+      }
+
+      .solution-fixed__camera {
+        opacity: 0;
+      }
+    }
+
+    &.smartphones {
+      .solution-fixed__iphone__overlay,
+      .solution-fixed__iphone__background {
+
+      }
+    }
+
+    &.camera .solution-fixed__iphone__overlay {
+
+    }
+
+    &.unity {
+      .solution-fixed__iphone__overlay,
+      .solution-fixed__iphone__background {
+        transform: rotate(90deg);
+        background-image: url('/images/iphone_unity.png');
+      }
+    }
+
+
+    &.app .solution-fixed__iphone__overlay,
+    &.app .solution-fixed__iphone__background {
+      top:-100px;
+    }
+
+    &.app .solution-fixed__iphone__overlay {
+      background-image: url('/images/iphone_app.png');
+    }
+
+
+    &.vr .fixed-iphone__overlay {
+      background-image: url('/images/iphone_black.png');
+    }
+
+  }
+
+
+  .solution {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    background-color: $color-white;
+    margin-bottom: 5rem;
+
+    &__explaination,
+    &__cardboard {
+      color: $color-black;
+      display: flex;
+      flex-flow: row wrap;
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        height: 10rem;
+        margin-bottom: -5rem;
+      }
+    }
+
+    &__explaination {
+      opacity: 0;
+      flex: 2;
+      align-items: stretch;
+      justify-content: center;
+      padding: $lineheight*2 2% $lineheight*3 2%;
+
+      p {
+        opacity: 0;
+      }
+
+      @include tablet {
+        flex: 100%;
+      }
+
+    }
+
+    &__cardboard {
+      z-index: 10;
+      flex: 3;
+      justify-content: center;
+      align-items: flex-end;
+      display: relative;
+      min-height: 40rem;
+
+      &__container {
+        position: relative;
+      }
+
+      &__overlay {
+        position: relative;
         width: 500px;
         height: 300px;
         background-image: url('/images/cardboard.png');
-        background-repeat: url('/images/cardboard.png') no-repeat;
+        background-repeat: no-repeat;
         background-size: cover;
         z-index: 1;
-        margin-bottom: -265px;
       }
-      video {
+      &__video {
+        position: relative;
+        margin-top: -300px;
+        padding-bottom: 4rem;
         width: 420px;
         z-index: 0;
       }
@@ -259,6 +396,30 @@
         }
       }
     }
+    &.seen {
+      aside {
+        @include fadeInUp(
+          $duration: 750ms,
+          $function: ease,
+          $fill: both
+        );
+      }
+    }
+  }
+
+  .download {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-orange;
+    min-height: 30rem;
+    padding-bottom: 0;
+
+    h1, h2 {
+      color: white;
+    }
+
   }
 
 }
