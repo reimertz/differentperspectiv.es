@@ -95,7 +95,7 @@
       flex: 2;
       align-items: stretch;
       justify-content: center;
-      padding: $lineheight*2 2%;
+      padding: $lineheight*4 2%;
       opacity: 0;
       @include tablet {
         flex: 100%;
@@ -103,111 +103,7 @@
 
     }
 
-    &__infographics {
-      flex: 3;
-
-      @include tablet {
-        display: none;
-      }
-
-      &__statistics,
-      &__most-common-insults,
-      &__most-common-subjects {
-        @include list-reset;
-        display: flex;
-        flex: 100%;
-        flex-flow: row wrap;
-        align-items: stretch;
-
-
-        li {
-          opacity: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-color: $color-pink;
-          padding: $lineheight*2 10%;
-          color: white;
-        }
-
-        canvas {
-          width: 150px;
-          height: 150px;
-        }
-      }
-
-      &__statistics {
-        h1 {
-          margin: 0;
-          font-weight: 700;
-          line-height: 150px;
-          color: white;
-        }
-
-        li {
-          flex: 1;
-          @include tablet {
-            flex: 100%;
-          }
-        }
-      }
-
-      &__most-common-insults,
-      &__most-common-subjects {
-
-        figure {
-          font-size: 3rem;
-        }
-
-        figcaption {
-          font-size: 1.5rem;
-        }
-
-        li:first-child {
-          //flex: 100%;
-          h2 {
-            font-size: 1.75rem;
-            margin-bottom: 0;
-            color: white;
-          }
-        }
-
-        li {
-          flex: 1;
-          @include tablet {
-            flex: 100%;
-          }
-        }
-      }
-      &__most-common-insults {
-        li {
-          //color: $color-white;
-          //background-color: $color-black;
-        }
-
-      }
-    }
-
     &.seen {
-      ul:nth-child(1){
-        li:nth-child(1)  { animation-delay: 0.5s }
-        li:nth-child(2)  { animation-delay: 0.7s }
-      }
-
-      ul:nth-child(2){
-        li:nth-child(1)  { animation-delay: 0.9s }
-        li:nth-child(2)  { animation-delay: 1.1s }
-        li:nth-child(3)  { animation-delay: 1.3s }
-        li:nth-child(4)  { animation-delay: 1.5s }
-      }
-
-      ul:nth-child(3){
-        li:nth-child(1)  { animation-delay: 1.5s }
-        li:nth-child(2)  { animation-delay: 1.7s }
-        li:nth-child(3)  { animation-delay: 1.9s }
-        li:nth-child(4)  { animation-delay: 2.2s }
-      }
 
       aside {
         @include fadeInUp(
@@ -215,14 +111,6 @@
           $function: ease,
           $fill: both
         );
-      }
-
-      li {
-        @include fadeIn(
-          $duration: 500ms,
-          $function: ease,
-          $fill: both
-        )
       }
     }
   }
@@ -307,7 +195,7 @@
     }
 
 
-    &.vr .fixed-iphone__overlay {
+    &.vr .solution-fixed__iphone__overlay {
       background-image: url('/images/iphone_black.png');
     }
 
@@ -415,9 +303,22 @@
     background-color: $color-orange;
     min-height: 30rem;
     padding-bottom: 0;
+    z-index: 3;
 
-    h1, h2 {
+    h1, h2, .buttons {
       color: white;
+      opacity: 0;
+      transition: opacity 1000ms;
+    }
+
+
+    &.seen {
+      h1, .buttons {
+        opacity: 0.2;
+      }
+      h2 {
+        opacity: 1;
+      }
     }
 
   }
