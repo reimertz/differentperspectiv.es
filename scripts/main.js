@@ -1,40 +1,6 @@
 /* jshint devel:true */
 "use strict";
 
-function addDoughnut(){
-  var data = [
-    {
-        value: 1,
-        color:"white",
-        highlight: "rgba(255,255,255,0.5)",
-        label: "Yes"
-    },
-    {
-        value: 9,
-        color: "transparent",
-        highlight: "rgba(255,255,255,0.5)",
-        label: "No"
-    }
-  ];
-
-  var options = {
-      maintainAspectRatio: true,
-      segmentStrokeWidth : 1,
-     showTooltips: false
-  }
-
-  new Chart(document.getElementById('1-out-of-10').getContext("2d")).Pie(data,options);
-}
-
-var waypoint = new Waypoint({
-  element: document.getElementById('1-out-of-10'),
-  handler: function(direction) {
-    setTimeout(addDoughnut, 1000);
-    this.destroy();
-  },
-  offset: '50%'
-})
-
 
 Array.prototype.slice.call(document.querySelectorAll('main > section')).map(function(section){
   new Waypoint({
