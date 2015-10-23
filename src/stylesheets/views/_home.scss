@@ -199,6 +199,10 @@
       background-image: url('/images/iphone_black.png');
     }
 
+    @include tablet {
+      display: none;
+    }
+
   }
 
 
@@ -271,6 +275,10 @@
         padding-bottom: 4rem;
         width: 420px;
         z-index: 0;
+      }
+
+      @include tablet {
+        display: none;
       }
 
       @include handheld {
